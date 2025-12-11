@@ -1,73 +1,30 @@
-# React + TypeScript + Vite
+# Rebuy Marketplace
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Setup:
 
-Currently, two official plugins are available:
+Decided to work with React because I find it much easier to build an application faster.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Component Structure:
+<img width="1140" height="847" alt="Bildschirmfoto 2025-12-11 um 22 06 13" src="https://github.com/user-attachments/assets/9b4bb0d8-1dd3-496f-9e23-501d30455ce4" />
 
-## React Compiler
+Data Flow:
+<img width="1209" height="481" alt="Bildschirmfoto 2025-12-11 um 22 06 44" src="https://github.com/user-attachments/assets/57b3c3e0-d159-4742-93ee-96cb58760970" />
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Functionality (tests):
+<img width="1518" height="542" alt="Bildschirmfoto 2025-12-11 um 22 07 21" src="https://github.com/user-attachments/assets/f9a7a855-1415-48a5-b744-a79e7c8e29fe" />
 
-## Expanding the ESLint configuration
+Styling was inspired by Tailwind UI components
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Desktop UI:
+<img width="1705" height="845" alt="Bildschirmfoto 2025-12-11 um 22 19 04" src="https://github.com/user-attachments/assets/dbdfc4d9-3025-4044-9420-53c27038d3af" />
+<img width="865" height="424" alt="Bildschirmfoto 2025-12-11 um 22 19 12" src="https://github.com/user-attachments/assets/60a4c105-7f2b-4bea-b306-98cc633309ea" />
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Mobile UI:
+<br>
+<img width="478" height="861" alt="Bildschirmfoto 2025-12-11 um 22 19 37" src="https://github.com/user-attachments/assets/97141f1d-72d8-4b01-bd74-75b15a01ead5" />
+<img width="505" height="854" alt="Bildschirmfoto 2025-12-11 um 22 19 26" src="https://github.com/user-attachments/assets/a659786b-3a56-4bf3-98b2-19527ae404c1" />
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Performance, Accessibility, and SEO:
+<br>
+<img width="696" height="523" alt="Bildschirmfoto 2025-12-11 um 22 04 25" src="https://github.com/user-attachments/assets/afc04a27-5042-4a78-87d6-bdd3bf0f5fa4" />
