@@ -1,5 +1,7 @@
 # Rebuy Marketplace
 
+Intro Video: https://www.loom.com/share/17c2779e098543fa95c95436c717cfb8
+
 Setup:
 
 Decided to work with React because I find it much easier to build an application faster.
