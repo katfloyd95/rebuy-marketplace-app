@@ -25,7 +25,9 @@ export default function OfferCard({ offer, setOffers }: offerProps) {
       <Link to={`/offer/${offer.id}`}>
         <button className="button">View Details</button>
       </Link>
-      <button className="button">Buy on rebuy</button>
+      <a href={offer?.purchaseUrl}>
+        <button className="button">Buy on rebuy</button>
+      </a>
     </div>
   );
 }
