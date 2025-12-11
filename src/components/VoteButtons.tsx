@@ -6,11 +6,11 @@ interface props {
   export default function VoteButtons({ votes, onVote }: props) {
     return (
       <div>
-        <button>
+        <button onClick={() => onVote(+1)}>
           ↑
         </button>
         <span>{votes}</span>
-        <button>
+        <button onClick={() => onVote(-1)}>
           ↓
         </button>
       </div>

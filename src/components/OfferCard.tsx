@@ -8,13 +8,20 @@ interface offerProps {
 }
 
 export default function OfferCard({ offer, setOffers }: offerProps) {
+    const handleVote = function (diff: number) {
+        setOffers((currentOfferList) =>
+          currentOfferList.map((o) =>
+            o.id === offer.id ? { ...o, votes: o.votes + diff } : o
+          )
+        );
+      };
 
   return (
     <div>
       <img src={offer.imageSrc} />
       <h4>{offer.title}</h4>
       <p>{offer.price}€</p>
-      <VoteButtons votes={offer.votes} onVote={setOffers} />
+      <VoteButtons votes={offer.votes} onVote={handleVote} />
       <Link to={`/offer/${offer.id}`}>
         <button className="button">View Details</button>
       </Link>
